@@ -106,7 +106,8 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
               <BarChart
                 data={data}
                 margin={{ top: 5, right: 15, left: 0, bottom: 5 }}
-                barCategoryGap={5}
+                barCategoryGap="10%"
+                maxBarSize={60}
               >
                 <defs>
                   <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
