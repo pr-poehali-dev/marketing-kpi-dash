@@ -1,11 +1,79 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState } from "react";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
+import MetricCard from "@/components/dashboard/MetricCard";
+import ChartWidget from "@/components/dashboard/ChartWidget";
+import { generateMockData } from "@/lib/mockData";
 
 const Index = () => {
+  const [selectedPeriod, setSelectedPeriod] = useState("30d");
+  const data = generateMockData(selectedPeriod);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+      <div className="container mx-auto px-6 py-8">
+        <DashboardHeader
+          selectedPeriod={selectedPeriod}
+          onPeriodChange={setSelectedPeriod}
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <MetricCard
+            title="Sessions"
+            value={data.sessions.current}
+            change={data.sessions.change}
+            source="GA4"
+            icon="👥"
+          />
+          <MetricCard
+            title="Conversions"
+            value={data.conversions.current}
+            change={data.conversions.change}
+            source="GA4"
+            icon="🎯"
+          />
+          <MetricCard
+            title="CPA"
+            value={`$${data.cpa.current}`}
+            change={data.cpa.change}
+            source="Meta Ads"
+            icon="💰"
+            isInverted
+          />
+          <MetricCard
+            title="ROAS"
+            value={`${data.roas.current}x`}
+            change={data.roas.change}
+            source="Meta Ads"
+            icon="📈"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <ChartWidget
+            title="Sessions Trend"
+            data={data.sessionsChart}
+            type="area"
+            color="#2196F3"
+          />
+          <ChartWidget
+            title="Conversions Trend"
+            data={data.conversionsChart}
+            type="line"
+            color="#4CAF50"
+          />
+          <ChartWidget
+            title="CPA Trend"
+            data={data.cpaChart}
+            type="area"
+            color="#FF9800"
+          />
+          <ChartWidget
+            title="ROAS Performance"
+            data={data.roasChart}
+            type="line"
+            color="#9C27B0"
+          />
+        </div>
       </div>
     </div>
   );
