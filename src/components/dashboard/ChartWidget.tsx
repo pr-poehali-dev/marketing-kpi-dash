@@ -45,7 +45,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
 
   return (
     <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-slate-900 to-slate-800 text-white animate-fade-in">
-      <CardHeader className="pb-6">
+      <CardHeader className="pb-6 px-6">
         <div className="flex justify-between items-center">
           <CardTitle className="text-xl font-bold text-white">
             {title}
@@ -53,7 +53,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
           <span className="text-sm text-slate-400 font-medium">{period}</span>
         </div>
       </CardHeader>
-      <CardContent className="px-6 pb-6">
+      <CardContent className="px-6 pb-6 pt-0">
         <ChartContainer config={chartConfig} className="h-[280px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             {type === "area" ? (
