@@ -17,7 +17,7 @@ const CalendarWidget: React.FC = () => {
   return (
     <Card className="shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border-0 bg-white dark:bg-[#1D3152] w-full">
       <CardContent className="p-6">
-        <div className="p-6 px-[60px]">
+        <div className="flex items-center gap-2 mb-6">
           <Icon
             name="Calendar"
             size={20}
