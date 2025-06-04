@@ -14,7 +14,7 @@ const CalendarWidget: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-[#1e3a5f] rounded-xl p-6 border border-gray-200 dark:border-blue-700/30 h-fit">
+    <div className="bg-white dark:bg-[#1e3a5f] rounded-xl p-6 border border-gray-200 dark:border-blue-700/30 w-full">
       <div className="flex items-center gap-2 mb-6">
         <Icon
           name="Calendar"
@@ -28,7 +28,7 @@ const CalendarWidget: React.FC = () => {
 
       <div className="space-y-6">
         {/* Календарь с улучшенной адаптацией */}
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <Calendar
             mode="single"
             selected={selectedDate}
@@ -37,10 +37,10 @@ const CalendarWidget: React.FC = () => {
                      [&_table]:w-full [&_table]:table-fixed
                      [&_thead]:w-full
                      [&_tbody]:w-full  
-                     [&_th]:text-center [&_th]:text-xs [&_th]:font-medium [&_th]:text-gray-500 [&_th]:dark:text-blue-300 [&_th]:pb-2 [&_th]:w-full
-                     [&_td]:text-center [&_td]:p-1 [&_td]:w-full
+                     [&_th]:text-center [&_th]:text-xs [&_th]:font-medium [&_th]:text-gray-500 [&_th]:dark:text-blue-300 [&_th]:pb-2 [&_th]:w-[14.28%]
+                     [&_td]:text-center [&_td]:p-1 [&_td]:w-[14.28%]
                      [&_.rdp-cell]:w-full [&_.rdp-cell]:h-10 [&_.rdp-cell]:flex [&_.rdp-cell]:justify-center [&_.rdp-cell]:items-center
-                     [&_.rdp-button]:w-8 [&_.rdp-button]:h-8 [&_.rdp-button]:text-sm [&_.rdp-button]:rounded-lg 
+                     [&_.rdp-button]:w-full [&_.rdp-button]:h-8 [&_.rdp-button]:text-sm [&_.rdp-button]:rounded-lg [&_.rdp-button]:min-w-[32px]
                      [&_.rdp-button]:hover:bg-cyan-50 [&_.rdp-button]:dark:hover:bg-blue-700/50
                      [&_.rdp-day_selected]:bg-cyan-600 [&_.rdp-day_selected]:text-white [&_.rdp-day_selected]:font-medium
                      [&_.rdp-day_today]:bg-cyan-100 [&_.rdp-day_today]:dark:bg-blue-700/30 [&_.rdp-day_today]:text-cyan-700 [&_.rdp-day_today]:dark:text-cyan-400 [&_.rdp-day_today]:font-medium

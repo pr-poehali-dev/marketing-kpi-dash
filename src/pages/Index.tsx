@@ -77,7 +77,7 @@ const Index = () => {
             </div>
 
             {/* Right column - Calendar and stats */}
-            <div className="space-y-6">
+            <div className="lg:col-span-2 space-y-6">
               <CalendarWidget />
 
               {/* Statistics widget */}
