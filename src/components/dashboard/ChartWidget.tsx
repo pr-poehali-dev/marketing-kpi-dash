@@ -59,7 +59,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             {type === "area" ? (
               <AreaChart
                 data={data}
-                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
               >
                 <defs>
                   <linearGradient
@@ -105,7 +105,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             ) : type === "bar" ? (
               <BarChart
                 data={data}
-                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
               >
                 <defs>
                   <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
@@ -141,7 +141,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             ) : (
               <LineChart
                 data={data}
-                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
               >
                 <XAxis
                   dataKey="date"
