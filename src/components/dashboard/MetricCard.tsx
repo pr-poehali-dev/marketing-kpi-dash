@@ -24,7 +24,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
 
   return (
     <Card
-      className="shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
+      className="shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border-0"
       style={{ backgroundColor: "#1D3152" }}
     >
       <CardContent className="p-6">
