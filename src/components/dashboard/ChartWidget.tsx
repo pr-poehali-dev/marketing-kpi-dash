@@ -53,11 +53,8 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
           <span className="text-sm text-slate-400 font-medium">{period}</span>
         </div>
       </CardHeader>
-      <CardContent className="px-6">
-        <ChartContainer
-          config={chartConfig}
-          className="h-[280px] w-full -mx-6 -mr-0"
-        >
+      <CardContent className="px-6 pb-6">
+        <ChartContainer config={chartConfig} className="h-[280px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             {type === "area" ? (
               <AreaChart
