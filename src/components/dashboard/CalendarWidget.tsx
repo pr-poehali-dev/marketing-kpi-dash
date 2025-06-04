@@ -33,15 +33,19 @@ const CalendarWidget: React.FC = () => {
             mode="single"
             selected={selectedDate}
             onSelect={setSelectedDate}
-            className="w-full [&_table]:w-full [&_table]:table-fixed
-                     [&_th]:text-center [&_th]:text-xs [&_th]:font-medium [&_th]:text-gray-500 [&_th]:dark:text-blue-300 [&_th]:pb-2
-                     [&_td]:text-center [&_td]:p-0 
+            className="w-full rounded-lg border border-gray-200 dark:border-blue-700/30 p-3
+                     [&_table]:w-full [&_table]:table-fixed
+                     [&_thead]:w-full
+                     [&_tbody]:w-full  
+                     [&_th]:text-center [&_th]:text-xs [&_th]:font-medium [&_th]:text-gray-500 [&_th]:dark:text-blue-300 [&_th]:pb-2 [&_th]:w-full
+                     [&_td]:text-center [&_td]:p-1 [&_td]:w-full
                      [&_.rdp-cell]:w-full [&_.rdp-cell]:h-10 [&_.rdp-cell]:flex [&_.rdp-cell]:justify-center [&_.rdp-cell]:items-center
                      [&_.rdp-button]:w-8 [&_.rdp-button]:h-8 [&_.rdp-button]:text-sm [&_.rdp-button]:rounded-lg 
                      [&_.rdp-button]:hover:bg-cyan-50 [&_.rdp-button]:dark:hover:bg-blue-700/50
                      [&_.rdp-day_selected]:bg-cyan-600 [&_.rdp-day_selected]:text-white [&_.rdp-day_selected]:font-medium
                      [&_.rdp-day_today]:bg-cyan-100 [&_.rdp-day_today]:dark:bg-blue-700/30 [&_.rdp-day_today]:text-cyan-700 [&_.rdp-day_today]:dark:text-cyan-400 [&_.rdp-day_today]:font-medium
-                     [&_.rdp-nav_button]:w-8 [&_.rdp-nav_button]:h-8 [&_.rdp-nav_button]:rounded-lg [&_.rdp-nav_button]:hover:bg-gray-100 [&_.rdp-nav_button]:dark:hover:bg-blue-700/50"
+                     [&_.rdp-nav_button]:w-8 [&_.rdp-nav_button]:h-8 [&_.rdp-nav_button]:rounded-lg [&_.rdp-nav_button]:hover:bg-gray-100 [&_.rdp-nav_button]:dark:hover:bg-blue-700/50
+                     [&_.rdp-caption]:flex [&_.rdp-caption]:justify-between [&_.rdp-caption]:items-center [&_.rdp-caption]:mb-4"
           />
         </div>
 
