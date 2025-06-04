@@ -46,5 +46,11 @@ export const generateMockData = (period: string) => {
     conversionsChart: generateChartData(conversions / days, days),
     cpaChart: generateChartData(cpa, days),
     roasChart: generateChartData(roas, days),
+    trafficSources: [
+      { name: "Органический поиск", value: 45, color: "#2196F3" },
+      { name: "Прямой трафик", value: 25, color: "#4CAF50" },
+      { name: "Социальные сети", value: 20, color: "#FF9800" },
+      { name: "Реклама", value: 10, color: "#9C27B0" },
+    ],
   };
 };

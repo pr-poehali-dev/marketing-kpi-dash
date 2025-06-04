@@ -3,6 +3,7 @@ import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import MetricCard from "@/components/dashboard/MetricCard";
 import ChartWidget from "@/components/dashboard/ChartWidget";
+import PieChartWidget from "@/components/dashboard/PieChartWidget";
 import { generateMockData } from "@/lib/mockData";
 
 const Index = () => {
@@ -70,11 +71,22 @@ const Index = () => {
               type="area"
               color="#FF9800"
             />
-            <ChartWidget
-              title="Показатели ROAS"
-              data={data.roasChart}
-              type="line"
-              color="#9C27B0"
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 gap-6">
+                <ChartWidget
+                  title="Показатели ROAS"
+                  data={data.roasChart}
+                  type="line"
+                  color="#9C27B0"
+                />
+              </div>
+            </div>
+            <PieChartWidget
+              title="Источники трафика"
+              data={data.trafficSources}
             />
           </div>
         </div>
