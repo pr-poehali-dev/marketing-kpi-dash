@@ -57,8 +57,9 @@ const Index = () => {
               <ChartWidget
                 title="Тренд сессий"
                 data={data.sessionsChart}
-                type="area"
-                color="#2196F3"
+                type="bar"
+                color="#3B82F6"
+                period="2024"
               />
               <ChartWidget
                 title="Тренд конверсий"
