@@ -27,12 +27,14 @@ const CalendarWidget: React.FC = () => {
       </div>
 
       <div className="space-y-6">
-        <Calendar
-          mode="single"
-          selected={selectedDate}
-          onSelect={setSelectedDate}
-          className="rounded-md border border-gray-200 dark:border-blue-700/30"
-        />
+        <div className="w-full">
+          <Calendar
+            mode="single"
+            selected={selectedDate}
+            onSelect={setSelectedDate}
+            className="w-full mx-auto [&_table]:w-full [&_td]:text-center [&_th]:text-center [&_.rdp-cell]:flex [&_.rdp-cell]:justify-center [&_.rdp-cell]:items-center [&_.rdp-button]:w-8 [&_.rdp-button]:h-8 [&_.rdp-button]:flex [&_.rdp-button]:items-center [&_.rdp-button]:justify-center"
+          />
+        </div>
 
         <div>
           <h4 className="text-sm font-medium text-gray-600 dark:text-blue-200 mb-3">

@@ -56,7 +56,7 @@ const Index = () => {
           </div>
 
           {/* Main content area */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Left column - Charts and tables */}
             <div className="lg:col-span-3 space-y-6">
               {/* Earnings chart */}
