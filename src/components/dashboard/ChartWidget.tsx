@@ -17,16 +17,20 @@ import {
 
 interface ChartWidgetProps {
   title: string;
+  subtitle?: string;
   data: Array<{ date: string; value: number }>;
   type: "area" | "line";
   color: string;
+  height?: string;
 }
 
 const ChartWidget: React.FC<ChartWidgetProps> = ({
   title,
+  subtitle,
   data,
   type,
   color,
+  height = "200px",
 }) => {
   const chartConfig = {
     value: {
@@ -41,9 +45,12 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
         <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
           {title}
         </CardTitle>
+        {subtitle && (
+          <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>
+        )}
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[200px] w-full">
+        <ChartContainer config={chartConfig} className={`${height} w-full`}>
           {type === "area" ? (
             <AreaChart data={data}>
               <XAxis
