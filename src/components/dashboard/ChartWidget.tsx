@@ -105,7 +105,8 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             ) : type === "bar" ? (
               <BarChart
                 data={data}
-                margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
+                margin={{ top: 5, right: 15, left: 0, bottom: 5 }}
+                barCategoryGap={5}
               >
                 <defs>
                   <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
