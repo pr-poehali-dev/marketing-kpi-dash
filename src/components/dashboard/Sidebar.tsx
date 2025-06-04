@@ -32,9 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false }) => {
       {/* Header */}
       <div className="p-6 border-b border-gray-200 dark:border-blue-700/30">
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-8 h-8 bg-cyan-400 rounded flex items-center justify-center">
-            <span className="text-white font-bold text-sm">A</span>
-          </div>
           <span className="font-semibold text-cyan-600 dark:text-cyan-400">
             MKD
           </span>
