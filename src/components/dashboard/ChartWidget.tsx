@@ -36,9 +36,12 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
   };
 
   return (
-    <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+    <Card
+      className="shadow-lg hover:shadow-xl transition-all duration-300"
+      style={{ backgroundColor: "#1D3152" }}
+    >
       <CardHeader className="pb-4">
-        <CardTitle className="text-lg font-semibold text-gray-900">
+        <CardTitle className="text-lg font-semibold text-white">
           {title}
         </CardTitle>
       </CardHeader>

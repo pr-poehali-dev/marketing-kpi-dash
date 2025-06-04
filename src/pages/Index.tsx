@@ -9,7 +9,7 @@ const Index = () => {
   const data = generateMockData(selectedPeriod);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+    <div className="min-h-screen" style={{ backgroundColor: "#28406B" }}>
       <div className="container mx-auto px-6 py-8">
         <DashboardHeader
           selectedPeriod={selectedPeriod}
