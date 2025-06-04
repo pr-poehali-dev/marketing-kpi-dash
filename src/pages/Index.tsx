@@ -52,41 +52,39 @@ const Index = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <ChartWidget
-              title="Тренд сессий"
-              data={data.sessionsChart}
-              type="area"
-              color="#2196F3"
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 space-y-6">
+              <ChartWidget
+                title="Тренд сессий"
+                data={data.sessionsChart}
+                type="area"
+                color="#2196F3"
+              />
+              <ChartWidget
+                title="Тренд конверсий"
+                data={data.conversionsChart}
+                type="line"
+                color="#4CAF50"
+              />
+            </div>
+            <PieChartWidget
+              title="Источники трафика"
+              data={data.trafficSources}
             />
-            <ChartWidget
-              title="Тренд конверсий"
-              data={data.conversionsChart}
-              type="line"
-              color="#4CAF50"
-            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
             <ChartWidget
               title="Тренд CPA"
               data={data.cpaChart}
               type="area"
               color="#FF9800"
             />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-            <div className="lg:col-span-2">
-              <div className="grid grid-cols-1 gap-6">
-                <ChartWidget
-                  title="Показатели ROAS"
-                  data={data.roasChart}
-                  type="line"
-                  color="#9C27B0"
-                />
-              </div>
-            </div>
-            <PieChartWidget
-              title="Источники трафика"
-              data={data.trafficSources}
+            <ChartWidget
+              title="Показатели ROAS"
+              data={data.roasChart}
+              type="line"
+              color="#9C27B0"
             />
           </div>
         </div>
