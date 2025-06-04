@@ -40,7 +40,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
   };
 
   return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white dark:bg-[#1D3152]">
+    <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white dark:bg-[#1D3152]">
       <CardHeader className="pb-4">
         <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
           {title}
@@ -49,58 +49,54 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
           <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>
         )}
       </CardHeader>
-      <CardContent className="p-0">
-        <div style={{ height, width: "100%" }}>
-          <ChartContainer config={chartConfig} className="h-full w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              {type === "area" ? (
-                <AreaChart data={data}>
-                  <XAxis
-                    dataKey="date"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                  />
-                  <YAxis
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                  <Area
-                    type="monotone"
-                    dataKey="value"
-                    stroke={color}
-                    fill={`${color}20`}
-                    strokeWidth={2}
-                  />
-                </AreaChart>
-              ) : (
-                <LineChart data={data}>
-                  <XAxis
-                    dataKey="date"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                  />
-                  <YAxis
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                  <Line
-                    type="monotone"
-                    dataKey="value"
-                    stroke={color}
-                    strokeWidth={3}
-                    dot={false}
-                  />
-                </LineChart>
-              )}
-            </ResponsiveContainer>
-          </ChartContainer>
-        </div>
+      <CardContent>
+        <ChartContainer config={chartConfig} className={`${height} w-full`}>
+          {type === "area" ? (
+            <AreaChart data={data}>
+              <XAxis
+                dataKey="date"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12, fill: "#6B7280" }}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12, fill: "#6B7280" }}
+              />
+              <ChartTooltip content={<ChartTooltipContent />} />
+              <Area
+                type="monotone"
+                dataKey="value"
+                stroke={color}
+                fill={`${color}20`}
+                strokeWidth={2}
+              />
+            </AreaChart>
+          ) : (
+            <LineChart data={data}>
+              <XAxis
+                dataKey="date"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12, fill: "#6B7280" }}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12, fill: "#6B7280" }}
+              />
+              <ChartTooltip content={<ChartTooltipContent />} />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke={color}
+                strokeWidth={3}
+                dot={false}
+              />
+            </LineChart>
+          )}
+        </ChartContainer>
       </CardContent>
     </Card>
   );
