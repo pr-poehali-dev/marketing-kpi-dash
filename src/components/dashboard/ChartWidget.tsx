@@ -54,12 +54,12 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
         </div>
       </CardHeader>
       <CardContent className="px-6">
-        <ChartContainer config={chartConfig} className="h-[280px] w-full -mx-2">
+        <ChartContainer config={chartConfig} className="h-[280px] w-full -mx-6">
           <ResponsiveContainer width="100%" height="100%">
             {type === "area" ? (
               <AreaChart
                 data={data}
-                margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
               >
                 <defs>
                   <linearGradient
@@ -105,7 +105,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             ) : type === "bar" ? (
               <BarChart
                 data={data}
-                margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
               >
                 <defs>
                   <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
@@ -141,7 +141,7 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
             ) : (
               <LineChart
                 data={data}
-                margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: -10, bottom: 20 }}
               >
                 <XAxis
                   dataKey="date"
