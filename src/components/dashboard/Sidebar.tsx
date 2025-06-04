@@ -36,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false }) => {
             <span className="text-white font-bold text-sm">A</span>
           </div>
           <span className="font-semibold text-cyan-600 dark:text-cyan-400">
-            Art
+            MKD
           </span>
         </div>
 
