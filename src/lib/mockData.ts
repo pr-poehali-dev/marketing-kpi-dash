@@ -46,17 +46,5 @@ export const generateMockData = (period: string) => {
     conversionsChart: generateChartData(conversions / days, days),
     cpaChart: generateChartData(cpa, days),
     roasChart: generateChartData(roas, days),
-    earningsChart: generateChartData(5825, days),
-    reportData: [
-      { period: "Неделя 1", amount: "$825.53", clients: 92 },
-      { period: "Неделя 2", amount: "$944.01", clients: 65 },
-      { period: "Неделя 3", amount: "$625.12", clients: 84 },
-      { period: "Неделя 4", amount: "$881.88", clients: 74 },
-    ],
-    analysisData: {
-      bankAccount: 155,
-      paypal: 502,
-      qiwi: 2500,
-    },
   };
 };
