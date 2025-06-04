@@ -10,7 +10,7 @@ const Index = () => {
   const data = generateMockData(selectedPeriod);
 
   return (
-    <div className="min-h-screen flex" style={{ backgroundColor: "#28406B" }}>
+    <div className="min-h-screen flex bg-white dark:bg-[#28406B] transition-colors duration-300">
       <Sidebar />
       <div className="flex-1 ml-64">
         <div className="container mx-auto px-6 py-8">

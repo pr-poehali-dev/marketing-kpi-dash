@@ -15,10 +15,10 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
     <div className="mb-8 animate-fade-in">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-4xl font-bold text-white mb-2 font-montserrat">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2 font-montserrat transition-colors duration-300">
             Marketing KPI Dashboard
           </h1>
-          <p className="text-blue-200 text-lg">
+          <p className="text-gray-600 dark:text-blue-200 text-lg transition-colors duration-300">
             Мониторинг ключевых метрик из GA4 и Meta Ads
           </p>
         </div>
