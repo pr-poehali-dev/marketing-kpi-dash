@@ -54,7 +54,10 @@ const ChartWidget: React.FC<ChartWidgetProps> = ({
         </div>
       </CardHeader>
       <CardContent className="px-6">
-        <ChartContainer config={chartConfig} className="h-[280px] w-full -mx-6">
+        <ChartContainer
+          config={chartConfig}
+          className="h-[280px] w-full -mx-6 -mr-0"
+        >
           <ResponsiveContainer width="100%" height="100%">
             {type === "area" ? (
               <AreaChart
