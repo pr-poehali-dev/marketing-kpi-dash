@@ -18,14 +18,14 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <MetricCard
-            title="Sessions"
+            title="Сессии"
             value={data.sessions.current}
             change={data.sessions.change}
             source="GA4"
             icon="👥"
           />
           <MetricCard
-            title="Conversions"
+            title="Конверсии"
             value={data.conversions.current}
             change={data.conversions.change}
             source="GA4"
@@ -50,25 +50,25 @@ const Index = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ChartWidget
-            title="Sessions Trend"
+            title="Тренд сессий"
             data={data.sessionsChart}
             type="area"
             color="#2196F3"
           />
           <ChartWidget
-            title="Conversions Trend"
+            title="Тренд конверсий"
             data={data.conversionsChart}
             type="line"
             color="#4CAF50"
           />
           <ChartWidget
-            title="CPA Trend"
+            title="Тренд CPA"
             data={data.cpaChart}
             type="area"
             color="#FF9800"
           />
           <ChartWidget
-            title="ROAS Performance"
+            title="Показатели ROAS"
             data={data.roasChart}
             type="line"
             color="#9C27B0"
