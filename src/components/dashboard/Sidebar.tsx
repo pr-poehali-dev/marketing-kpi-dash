@@ -28,19 +28,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false }) => {
   ];
 
   return (
-    <div className="fixed left-0 top-0 h-full w-64 bg-[#1e3a5f] dark:bg-[#1e3a5f] bg-white text-white dark:text-white text-gray-800 flex flex-col z-50 border-r border-gray-200 dark:border-blue-700/30">
+    <div className="fixed left-0 top-0 h-full w-64 bg-white dark:bg-[#1e3a5f] text-gray-800 dark:text-white flex flex-col z-50 border-r border-gray-200 dark:border-blue-700/30">
       {/* Header */}
       <div className="p-6 border-b border-gray-200 dark:border-blue-700/30">
         <div className="flex items-center gap-2 mb-6">
           <div className="w-8 h-8 bg-cyan-400 rounded flex items-center justify-center">
             <span className="text-white font-bold text-sm">A</span>
           </div>
-          <span className="font-semibold text-cyan-400">Art</span>
+          <span className="font-semibold text-cyan-600 dark:text-cyan-400">
+            Art
+          </span>
         </div>
 
         {/* User Profile */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-300 dark:bg-gray-600">
+          <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-600">
             <img
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face"
               alt="User Avatar"
@@ -65,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false }) => {
                 href="#"
                 className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-blue-700/50 ${
                   item.active
-                    ? "bg-cyan-100 dark:bg-blue-600/50 text-cyan-800 dark:text-white"
+                    ? "bg-cyan-50 dark:bg-blue-600/50 text-cyan-700 dark:text-white"
                     : "text-gray-600 dark:text-blue-200"
                 }`}
               >
